@@ -1,0 +1,317 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extrahead %}
+      {% block title %}
+          <title> Landing Page </title>
+    {% endblock title %}
+    <link rel="stylesheet" href="{% static 'css/land.css' %}">
+
+{% endblock extrahead %}
+
+
+{% block content %}
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="{% url 'home' %}" class="logo"> <img class="img-fluid" src="{% static 'images/logo1.jpg' %}" alt="" height="50px" width="50px"> </a>
+
+        <nav class="navbar">
+            <div id="nav-close" class="bi bi-x-lg"></div>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'tenants' %}">Tenants</a>
+            <a href="{% url 'landlord' %}">LandLord</a>
+            <a href="{% url 'seller' %}">Seller</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="bi bi-list"></div>
+            <!-- <a href="#" class="bi bi-cart"></a> -->
+            <div id="search-btn" class="bi bi-search"></div>
+        </div>
+
+    </header>
+    
+    <!-- header section ends -->
+    
+    <!-- search form  -->
+    
+    <div class="search-form">
+    
+        <div id="close-search" class="bi bi-x-lg"></div>
+    
+        <form action="">
+            <input type="search" name="" placeholder="search here..." id="search-box">
+            <label for="search-box" class="bi bi-search"></label>
+        </form>
+    </div>
+    
+    <!-- home section starts  -->
+    
+    <section class="home" id="home">
+    
+        <div class="swiper home-slider">
+    
+            <div class="swiper-wrapper">
+    
+                <div class="swiper-slide">
+                    <div class="box" style="background: url('/static/images/home.jpg') no-repeat;">
+                        <div class="content">
+                            <span>{{ landing_data.header_mainheading }}</span>
+                            <h3>{{ landing_data.header_subheading  }}</h3>
+                            <p>{{ landing_data.header_caption }}</p>
+{#                            <a href="#" class="btn">get started</a>#}
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="swiper-slide">
+                    <div class="box second" style="background: url('/static/images/home1.jpg') no-repeat;">
+                        <div class="content">
+                            <span>make tour</span>
+                            <h3>amazing</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ex molestias soluta consequatur saepe aliquam, excepturi delectus consequuntur minus!</p>
+{#                            <a href="#" class="btn">get started</a>#}
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="swiper-slide">
+                    <div class="box" style="background: url('/static/images/home2.jpg') no-repeat;">
+                        <div class="content">
+                            <span>explore the</span>
+                            <h3>new world</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ex molestias soluta consequatur saepe aliquam, excepturi delectus consequuntur minus!</p>
+{#                            <a href="#" class="btn">get started</a>#}
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+    
+        </div>
+    
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- category section starts  -->
+
+    <section class="category">
+        <h1 class="text-center mb-5">
+            popular areas
+        </h1>
+        <div class="row justify-content-evenly">
+            <div class="col-sm-3" id="popular-areas">
+                <a href="{% url 'tenants' %}">
+                <div class="text">
+                    TENANTS
+                </div>
+                <div class="img">
+                    <div class="centered"> TENANTS </div>
+                    <img src="{% static 'images/home1.jpg'%}" height='100%' width='100%' />
+                </div>
+                </a>
+            </div>
+            <div class="col-sm-3" id="popular-areas">
+                <a href="{% url 'landlord' %}">
+                <div class="text">
+                     LANDLORDS
+                </div>
+                <div class="img">
+                    <div class="centered"> LANDLORDS</div>
+                    <img src="{% static 'images/home.jpg' %}" height='100%' width='100%' />
+                </div>
+                </a>
+            </div>
+            <div class="col-sm-3" id="popular-areas">
+                <a href="{% url 'seller' %}">
+                <div class="text">
+                    SELLER
+                </div>
+                <div class="img">
+                    <div class="centered">SELLER</div>
+                    <img src="{% static 'images/home2.jpg' %}" height='100%' width='100%' />
+                </div>
+                </a>
+            </div>
+{#            <div class="col-md-3" id="popular-areas">#}
+{#                <div class="text">#}
+{#                    SHOREDITCH#}
+{#                </div>#}
+{#                <div class="img">#}
+{#                    <div class="centered">SHOREDITCH</div>#}
+{#                    <img src="{% static 'images/home.jpg'%}" height='100%' width='100%' />#}
+{#                </div>#}
+{#            </div>#}
+        </div>
+
+
+    </section>
+
+    <!-- category section ends -->
+
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
+        <div class="image">
+            <img src="{% static 'images/home1.jpg' %}" alt="">
+        </div>
+        <div class="content">
+            <h3>welcome</h3>
+            <p> {{ landing_data.welcome_text }} </p>
+{#            <p>Your search for the perfect property is over. It is with great pleasure that we welcome you to#}
+{#                Blackstones – north London’s leading independent property and lettings agent. With a highly reputable#}
+{#                background in property management, a decade’s worth of experience in the industry, an ace team and the#}
+{#                most innovative systems, we can promise you an experience unlike any other.</p>#}
+{#            <p>Having served the borough of Haringey for a number of years, we’re ready to expand and have an artillery#}
+{#                of properties across north London and the City that are ready for the taking. From Shoreditch to#}
+{#                Highbury and Camden to Turnpike Lane, you’re sure to find your ideal property with us. Professionalism,#}
+{#                efficiency, honesty and expertise are at the heart of our business and we are committed to achieving#}
+{#                nothing shy of excellence with every client. The expression ‘home is where the heart is’ rings true now#}
+{#                more than ever as we understand the difficulties and challenges that come with searching for a property#}
+{#                in this current market and we’re well equipped to help.</p>#}
+{#            <p>Property searching will never be the same again; with exceptional communication, flexible hours which are#}
+{#                made to accommodate you, an endless list of properties across London and a team dedicated to exceeding#}
+{#                your expectations, you’ll find what you’re looking for. Whether you’re a landlord or a tenant, renting#}
+{#                or buying, or just trying to get on the property ladder, Blackstones is ready and waiting. Get in touch#}
+{#                and let’s begin finding you the perfect home.</p>#}
+        </div>
+
+    </section>
+
+    <!-- about section ends -->
+
+    <section class="reviews" id="reviews">
+
+        <h1 class="heading mt-5">WHAT OUR CLIENTS SAY</h1>
+
+        <div class="swiper review-slider mt-5">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <p>Great agency. Fast and smooth process to move in to properties as well as constant guidance and
+                        help where needed.</p>
+                    <div class="user">
+                        <img src="{% static 'images/pic-4.png' %}" alt="">
+                        <div class="info">
+                            <h3>Joe</h3>
+                            <span>3 months ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Had a great experience with Blackstones. Jube was very helpful before, throughout and after my
+                        tenancy and is extremely reliable and responsive.</p>
+                    <div class="user">
+                        <img src="{% static 'images/pic-2.png' %}" alt="">
+                        <div class="info">
+                            <h3>Frazer Stanford</h3>
+                            <span>1 month ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>For the past few years I have been renting one of the properties managed by this agency. The moving process was really quick and efficient.</p>
+                    <div class="user">
+                        <img src="{% static 'images/pic-3.png' %}" alt="">
+                        <div class="info">
+                            <h3>Marco Del Roio</h3>
+                            <span>2 weeks ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>I was looking for a place to rent and so I called them, and possibly the nicest man I've ever talked to answered me</p>
+                    <div class="user">
+                        <img src="{% static 'images/pic-5.png' %}" alt="">
+                        <div class="info">
+                            <h3>junaid iqbal</h3>
+                            <span>3 minutes ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>I had a very good experience with Blackstones. Costa and Rube left no stone unturned in finding me the right tenant. </p>
+                    <div class="user">
+                        <img src="{% static 'images/pic-6.png' %}"alt="">
+                        <div class="info">
+                            <h3>Rose Dsouza</h3>
+                            <span>1 year ago</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- reviews section ends -->
+
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home">home</a>
+                <a href="#about">about</a>
+                <a href="#shop">shop</a>
+                <a href="#packages">packages</a>
+                <a href="#reviews">reviews</a>
+                <a href="#blogs">blogs</a>
+            </div>
+
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#">my account</a>
+                <a href="#">my order</a>
+                <a href="#">my wishlist</a>
+                <a href="#">ask questions</a>
+                <a href="#">terms of use</a>
+                <a href="#">privacy policy</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+                <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+                <a href="#"> <i class="fas fa-envelope"></i> apex-info@gmail.com </a>
+                <a href="#"> <i class="fas fa-map"></i> United Kingdom - </a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+                <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+                <a href="#"> <i class="fab fa-github"></i> github </a>
+            </div>
+
+        </div>
+
+        <div class="credit">Copyright 2022. APEX RENTS All Rights Reserved.</div>
+
+    </section>
+
+    <!-- footer section ends -->
+
+
+
+
+{% endblock content %}
