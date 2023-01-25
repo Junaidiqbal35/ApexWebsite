@@ -30,5 +30,7 @@ class TenantPage(models.Model):
 
 class SellerPage(models.Model):
     seller_page_text = models.TextField(verbose_name='Seller Page')
+
+
 class InvestorPage(models.Model):
     investor_page_text = models.TextField(verbose_name='Investor Page')

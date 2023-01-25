@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from core.models import LandingPage, LandlordPage, TenantPage, SellerPage
+from core.models import LandingPage, LandlordPage, TenantPage, SellerPage, InvestorPage
 
 
 def landing_page(request):
