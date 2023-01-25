@@ -26,3 +26,8 @@ def seller_page(request):
     seller_data = SellerPage.objects.first()
     context = {'seller_data': seller_data}
     return render(request, 'seller.html', context)
+
+def investor_page(request):
+    investor_data = InvestorPage.objects.first()
+    context = {'investor_data': investor_data}
+    return render(request, 'investors.html', context)
