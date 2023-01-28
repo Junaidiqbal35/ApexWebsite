@@ -5,28 +5,66 @@
 
 {% block extrahead %}
        <link rel="stylesheet" href="{% static 'css/ten.css' %}">
+        <link rel="stylesheet" href="{% static 'css/land.css' %}">
 {% endblock extrahead %}
+
 {% block content %}
 
 
   <img class="bg-img" src="{% static 'images/home5.jpg' %}" alt="background-image">
-  <nav class="navbar sticky-top navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'home' %}"><img class="img-fluid" src="{% static 'images/apex_rent_logo.png' %}" alt="" height="100px" width="100px"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ms-auto">
-          <a class="nav-link" href="{% url 'home' %}">Home</a>
-            <a class="nav-link" href="{% url 'tenants' %}">Tenants</a>
-            <a class="nav-link" href="{% url 'landlord' %}">LandLord</a>
-            <a class="nav-link" href="{% url 'seller' %}">Seller</a>
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="{% url 'home' %}" class="logo"> <img class="img-fluid" src="{% static 'images/apex_rent_logo.png' %}" alt="" height="100px" width="100px"> </a>
+
+        <nav class="navbar sticky-top navbar-expand-lg">
+            <div id="nav-close" class="bi bi-x-lg"></div>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'tenants' %}">Tenants</a>
+            <a href="{% url 'landlord' %}">LandLord</a>
+            <a href="{% url 'seller' %}">Seller</a>
+            <a href="{% url 'investors' %}">Investors</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="bi bi-list"></div>
+            <!-- <a href="#" class="bi bi-cart"></a> -->
+            <div id="search-btn" class="bi bi-search"></div>
         </div>
-      </div>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- search form  -->
+
+    <div class="search-form">
+
+        <div id="close-search" class="bi bi-x-lg"></div>
+
+        <form action="">
+            <input type="search" name="" placeholder="search here..." id="search-box">
+            <label for="search-box" class="bi bi-search"></label>
+        </form>
     </div>
-  </nav>
+{#  <nav class="navbar sticky-top navbar-expand-lg">#}
+{#    <div class="container-fluid">#}
+{#      <a class="navbar-brand" href="{% url 'home' %}"><img class="img-fluid" src="{% static 'images/apex_rent_logo.png' %}" alt="" height="100px" width="100px"></a>#}
+{#      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"#}
+{#        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">#}
+{#        <span class="navbar-toggler-icon"></span>#}
+{#      </button>#}
+{#      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">#}
+{#        <div class="navbar-nav ms-auto">#}
+{#          <a class="nav-link" href="{% url 'home' %}">Home</a>#}
+{#            <a class="nav-link" href="{% url 'tenants' %}">Tenants</a>#}
+{#            <a class="nav-link" href="{% url 'landlord' %}">LandLord</a>#}
+{#            <a class="nav-link" href="{% url 'seller' %}">Seller</a>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </nav>#}
   <div class="container details">
     <div class="row">
       <h1>TENANTS

@@ -23,6 +23,7 @@
             <a href="{% url 'tenants' %}">Tenants</a>
             <a href="{% url 'landlord' %}">LandLord</a>
             <a href="{% url 'seller' %}">Seller</a>
+            <a href="{% url 'investors' %}">Investors</a>
         </nav>
 
         <div class="icons">
@@ -87,6 +88,8 @@
                         </div>
                     </div>
                 </div>
+
+
     
             </div>
     
@@ -139,15 +142,17 @@
                 </div>
                 </a>
             </div>
-{#            <div class="col-md-3" id="popular-areas">#}
-{#                <div class="text">#}
-{#                    SHOREDITCH#}
-{#                </div>#}
-{#                <div class="img">#}
-{#                    <div class="centered">SHOREDITCH</div>#}
-{#                    <img src="{% static 'images/home.jpg'%}" height='100%' width='100%' />#}
-{#                </div>#}
-{#            </div>#}
+            <div class="col-md-3" id="popular-areas">
+                   <a href="{% url 'investors' %}">
+                <div class="text">
+                    Investors
+                </div>
+                <div class="img">
+                    <div class="centered">Investors</div>
+                    <img src="{% static 'images/home.jpg'%}" height='100%' width='100%' />
+                </div>
+                   </a>
+            </div>
         </div>
 
 
