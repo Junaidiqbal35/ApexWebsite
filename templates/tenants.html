@@ -16,7 +16,7 @@
 
     <header class="header">
 
-        <a href="{% url 'home' %}" class="logo"> <img class="img-fluid" src="{% static 'images/apex_rent_logo.png' %}" alt="" height="100px" width="100px"> </a>
+        <a href="{% url 'home' %}" class="logo"> <img class="img-fluid" src="{% static 'images/apex_rent_logo1.jpg' %}" alt="" height="100px" width="100px"> </a>
 
         <nav class="navbar sticky-top navbar-expand-lg">
             <div id="nav-close" class="bi bi-x-lg"></div>
@@ -50,7 +50,7 @@
     </div>
 {#  <nav class="navbar sticky-top navbar-expand-lg">#}
 {#    <div class="container-fluid">#}
-{#      <a class="navbar-brand" href="{% url 'home' %}"><img class="img-fluid" src="{% static 'images/apex_rent_logo.png' %}" alt="" height="100px" width="100px"></a>#}
+{#      <a class="navbar-brand" href="{% url 'home' %}"><img class="img-fluid" src="{% static 'images/apex_rent_logo1.jpg' %}" alt="" height="100px" width="100px"></a>#}
 {#      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"#}
 {#        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">#}
 {#        <span class="navbar-toggler-icon"></span>#}
@@ -70,12 +70,12 @@
       <h1>TENANTS
       </h1>
       <div class="col-md-6">
-        <h5 class="mt-3">Taking care of you</h5>
-        <p>{{ tenant_data.taking_care_of_you_text }}</p>
+        <h2 class="mt-3">Taking care of you</h2><br>
+        <p>{{ tenant_data.taking_care_of_you_text }}</p><br>
         <p id="bold">A sea of properties across London, safekeeping of your deposit and all your legal requirements
-          met – what more could you want?</p>
-        <h5>Peace of mind
-        </h5>
+          met – what more could you want?</p><br>
+        <h2>Peace of mind
+        </h2><br>
           <p>  {{ tenant_data.peace_of_mind_text }}</p>
         <p id="bold">A stellar in-house maintenance team, dedicated staff, out of hours contact, and properties that
           are clean and safe – drop us a line today!

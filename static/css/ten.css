@@ -25,9 +25,10 @@ filter: brightness(0.6);
     color: white;
 }
 .details p{
-    font-weight: 300;
+  font-size: 1.3rem;
+    font-weight: 400;
 }
-.details h5{
+.details h2{
     color: black;
 }
 #bold{
@@ -148,4 +149,8 @@ filter: brightness(0.6);
   
   .submit:active {
     background-color: #274f51;
+  }
+  li{
+    font-size: 1.3rem;
+    font-weight: 400;
   }

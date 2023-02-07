@@ -18,6 +18,10 @@ ul{
   margin-bottom: 30px;
   list-style: none;
 }
+li{
+  font-size: 1.3rem;
+  font-weight: 400;
+}
 .details{
     margin-top: 140px;
     border-radius: 5px;
@@ -30,9 +34,10 @@ ul{
     color: white;
 }
 .details p{
-    font-weight: 300;
+    font-size: 1.3rem;
+    font-weight: 400;
 }
-.details h5{
+.details h2{
     color: black;
 }
 #bold{
