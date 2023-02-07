@@ -35,7 +35,7 @@ filter: brightness(0.6);
     font-weight: 600;
 }
 .form {
-    background-color: #15172b;
+    background-color: #3b3e5e;
     border-radius: 20px;
     box-sizing: border-box;
     height: 1220px;
@@ -87,7 +87,7 @@ filter: brightness(0.6);
   }
   
   .cut {
-    background-color: #15172b;
+    background-color: #3b3e5e;
     border-radius: 10px;
     height: 20px;
     left: 20px;
@@ -108,7 +108,7 @@ filter: brightness(0.6);
   }
   
   .placeholder {
-    color: #65657b;
+    color: white;
     font-family: sans-serif;
     left: 20px;
     line-height: 14px;
@@ -129,7 +129,7 @@ filter: brightness(0.6);
   }
   
   .input:focus ~ .placeholder {
-    color: #274f51;
+    color: white;
   }
   
   .submit {
@@ -146,9 +146,14 @@ filter: brightness(0.6);
     text-align: center;
     width: 100%;
   }
-  
+  .submit:hover{
+    background-color: #274f51;
+    color: white;
+  }
   .submit:active {
     background-color: #274f51;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   }
   li{
     font-size: 1.3rem;
