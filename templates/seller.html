@@ -7,6 +7,13 @@
 {% block extrahead %}
       <link rel="stylesheet" href="{% static 'css/sell.css' %}">
     <link rel="stylesheet" href="{% static 'css/land.css' %}">
+    <style>
+        .input{
+            margin-top: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
 {% endblock extrahead %}
 {% block content %}
     <!-- custom css file link  -->
@@ -80,7 +87,7 @@
                     <li>Is it the right time to sell?</li>
                     <li>Unsure about the current market situation?</li>
                 </ul>
-                <p>{{ seller_data.seller_page_text }}</p>
+                <h3>{{ seller_data.seller_page_text }}</h3>
                 <div class="form mt-4">
                     <div class="title">Selling your Property?</div>
                     <div class="subtitle">Please complete the form below to arrange a free no obligation sales valuation.</div>
@@ -143,41 +150,41 @@
             </div>
 
             <div class="col-md-5 d-flex justify-content-center">
-                <div class="col-md-12">
-                    <h2>Our Sales Process</h2>
+                <div class="col-md-12 process">
+                    <h1>Our Sales Process</h1>
                     
                     <div class="step">
                         <h2>1. Valuation</h2>
-                        <p>Local Experts</p>
-                        <p>Accurate Valuation</p>
+                        <h3>Local Experts</h3>
+                        <h3>Accurate Valuation</h3>
                     </div>
                     <div class="step">
                         <h2>2. Presentation</h2>
-                        <p>First Impressions count</p>
+                        <h3>First Impressions count</h3>
                     
                     </div>
                     <div class="step">
                         <h2>3. Marketing</h2>
-                        <p>Photos & Floor Plans</p>
-                        <p>Online Marketing</p>
-                        <p>Maximum Exposure</p>
+                        <h3>Photos & Floor Plans</h3>
+                        <h3>Online Marketing</h3>
+                        <h3>Maximum Exposure</h3>
                     </div>
                     <div class="step">
                         <h2>4. Viewings</h2>
-                        <p>Accompanied viewings to suit</p>
-                        <p> your timetable</p>
+                        <h3>Accompanied viewings to suit</h3>
+                        <h3> your timetable</h3>
                     </div>
                     <div class="step">
                         <h2>5. Communication</h2>
-                        <p>Offers</p>
-                        <p>Negotiation</p>
-                        <p>Feedback</p>
+                        <h3>Offers</h3>
+                        <h3>Negotiation</h3>
+                        <h3>Feedback</h3>
                     </div>
                     <div class="step">
                         <h2>6. Offer & Beyond</h2>
-                        <p>Achieve The Best Sales Price</p>
-                        <p>Advise & Help With</p>
-                        <p>Conveyancing</p>
+                        <h3>Achieve The Best Sales Price</h3>
+                        <h3>Advise & Help With</h3>
+                        <h3>Conveyancing</h3>
                     </div>
                 </div>
                

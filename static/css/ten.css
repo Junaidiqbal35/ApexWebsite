@@ -12,6 +12,9 @@ left: 0;
 z-index: -1;
 filter: brightness(0.6);
 }
+#sub h1{
+  color: black;
+}
 
 .details{
     margin-top: 140px;
@@ -38,7 +41,7 @@ filter: brightness(0.6);
     background-color: #3b3e5e;
     border-radius: 20px;
     box-sizing: border-box;
-    height: 1220px;
+    height: auto;
     padding: 20px;
     width: auto;
   }
@@ -57,6 +60,7 @@ filter: brightness(0.6);
     font-size: 16px;
     font-weight: 600;
     margin-top: 10px;
+    margin-bottom: 30px;
   }
   
   .input-container {

@@ -7,6 +7,13 @@
 {% block extrahead %}
        <link rel="stylesheet" href="{% static 'css/ten.css' %}">
         <link rel="stylesheet" href="{% static 'css/land.css' %}">
+        <style>
+          .input{
+              margin-top: 20px;
+              padding-top: 20px;
+              padding-bottom: 20px;
+          }
+      </style>
 {% endblock extrahead %}
 
 {% block content %}
@@ -70,20 +77,20 @@
     <div class="row">
       <h1>TENANTS
       </h1>
-      <div class="col-md-6">
-        <h2 class="mt-3">Taking care of you</h2><br>
-        <p>{{ tenant_data.taking_care_of_you_text }}</p><br>
-        <p id="bold">A sea of properties across London, safekeeping of your deposit and all your legal requirements
-          met – what more could you want?</p><br>
-        <h2>Peace of mind
-        </h2><br>
-          <p>  {{ tenant_data.peace_of_mind_text }}</p>
-        <p id="bold">A stellar in-house maintenance team, dedicated staff, out of hours contact, and properties that
+      <div class="col-md-6" id="sub">
+        <h1 class="my-5">Taking care of you</h1><br>
+        <h4>{{ tenant_data.taking_care_of_you_text }}</h4><br>
+        <h4 class="mb-5">A sea of properties across London, safekeeping of your deposit and all your legal requirements
+          met – what more could you want?</h4><br>
+        <h1 class="mb-5">Peace of mind
+        </h1><br>
+          <h4>  {{ tenant_data.peace_of_mind_text }}</h4>
+        <h4 class="mb-5">A stellar in-house maintenance team, dedicated staff, out of hours contact, and properties that
           are clean and safe – drop us a line today!
-        </p>
-        <p>If you’d like further insight on the areas we cover, check our area guides page – this will give you more
+        </h4>
+        <h4>If you’d like further insight on the areas we cover, check our area guides page – this will give you more
           detail in terms of transport links, amenities, parks and a few other hidden treasures that we
-        </p>
+        </h4>
       </div>
 
 

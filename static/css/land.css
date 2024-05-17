@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -32,10 +33,6 @@ html::-webkit-scrollbar-thumb {
   background: #274f51;
 }
 
-section {
-  padding: 5rem 9%;
-}
-
 .btn {
   margin-top: 1rem;
   display: inline-block;
@@ -55,7 +52,7 @@ section {
 
 .heading {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 5rem;
   font-size: 4rem;
   color: #10221b;
 }
@@ -76,7 +73,7 @@ section {
 }
 
 .header.active {
-  background: #fff;
+  background: #10221b;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
@@ -96,8 +93,8 @@ section {
 
 .header .navbar a {
   margin-left: 2rem;
-  font-size: 1.7rem;
-  color: #10221b;
+  font-size: 1.8rem;
+  color: white;
   text-decoration: none;
   text-shadow: #fff4e6 1px 0 3px;
 }
@@ -116,13 +113,15 @@ section {
   color: #10221b;
   display: none;
 }
-
+.header .navbar #nav-close a{
+  color: #10221b;
+}
 .header .icons a,
 .header .icons div {
   font-size: 2.5rem;
   margin-left: 2rem;
   cursor: pointer;
-  color: #10221b;
+  color: white;
 }
 
 .header .icons a:hover,
@@ -223,6 +222,7 @@ section {
 
 .home {
   padding: 0;
+  margin-bottom: 80px;
 }
 
 .home .box {
@@ -278,7 +278,9 @@ section {
   font-size: 3rem;
   color: #10221b;
 }
-
+.category{
+  margin-bottom: 100px;
+}
 .category .box-container {
   display: -ms-grid;
   display: grid;
@@ -286,7 +288,9 @@ section {
       grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
   gap: 1.5rem;
 }
-
+.category h1{
+  margin-bottom: 60px;
+}
 .category .box-container .box {
   text-align: center;
   padding: 1rem;
@@ -325,7 +329,12 @@ section {
       flex-wrap: wrap;
   gap: 2rem;
 }
-
+.about h3{
+  font-family: "Comfortaa", sans-serif;
+}
+.about .content{
+  padding: 30px;
+}
 .about .image {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 42rem;
@@ -356,6 +365,10 @@ section {
   color: #274f51;
   padding: 1rem 0;
   line-height: 2;
+}
+
+.reviews{
+  margin: 100px;
 }
 
 .reviews .slide .text {
@@ -432,6 +445,7 @@ section {
   -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
+  padding: 40px 80px;
 }
 
 .footer .box-container .box h3 {
@@ -520,7 +534,7 @@ section {
     position: fixed;
     top: 0;
     left: -110%;
-    background: #fff;
+    background: #10221b;
     z-index: 10000;
     width: 35rem;
     height: 100%;
@@ -546,6 +560,7 @@ section {
   .header .navbar a {
     margin: 1rem 0;
     font-size: 3rem;
+    color: white;
   }
   .header .navbar #nav-close {
     display: block;
