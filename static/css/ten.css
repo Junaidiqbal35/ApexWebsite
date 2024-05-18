@@ -14,6 +14,11 @@ filter: brightness(0.6);
 }
 #sub h1{
   color: black;
+  font-size: 3rem;
+  font-weight: 800;
+}
+#sub h3{
+  word-spacing: 3px;
 }
 
 .details{
@@ -26,10 +31,7 @@ filter: brightness(0.6);
 }
 .details h1{
     color: white;
-}
-.details p{
-  font-size: 1.3rem;
-    font-weight: 400;
+    font-size: 4rem;
 }
 .details h2{
     color: black;

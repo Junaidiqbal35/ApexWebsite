@@ -32,14 +32,9 @@ li{
 }
 .details h1{
     color: white;
+    font-size: 4rem;
 }
-.details p{
-    font-size: 1.3rem;
-    font-weight: 400;
-}
-.details h2{
-    color: black;
-}
+
 #bold{
     font-weight: 600;
 }
@@ -176,6 +171,7 @@ li{
     align-items: center;
   }
   .step:hover{
+    cursor: pointer;
     background-color: #3b3e5e;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }

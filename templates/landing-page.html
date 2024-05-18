@@ -5,24 +5,9 @@
           <title> Landing Page </title>
     {% endblock title %}
     <link rel="stylesheet" href="{% static 'css/land.css' %}">
-    <style>
-    .transparent-text {
-    background-color: rgba(255, 255, 255, 0.5); /* White background with 50% opacity */
-    color: #000000; /* Black text color */
-    font-size: 16px; /* Set your base font size to 16 pixels */
-    }
-    .stylish-bold-text {
-    background-color: rgba(255, 255, 255, 0.5); /* Example background for transparency */
-    color: #000000; /* Example text color */
-    font-size: 18px; /* Adjust font size as needed */
-    font-family: 'Roboto', sans-serif; /* Use the Roboto font */
-    font-weight: 700; /* 700 is equivalent to bold */
-}
-    </style>
+    <link rel="stylesheet" href="{% static 'css/ten.css' %}">
 
 {% endblock extrahead %}
-
-
 {% block content %}
 
     <!-- header section starts  -->
@@ -31,7 +16,7 @@
 
         <a href="{% url 'home' %}" class="logo"> <img class="img-fluid" src="{% static 'images/apex_rent_logo1.jpg' %}" alt="" height="60px" width="60px"> </a>
 
-        <nav class="navbar">
+        <nav class="navbar sticky-top navbar-expand-lg">
             <div id="nav-close" class="bi bi-x-lg"></div>
             <a href="{% url 'home' %}">Home</a>
             <a href="{% url 'tenants' %}">Tenants</a>
@@ -43,7 +28,7 @@
         <div class="icons">
             <div id="menu-btn" class="bi bi-list"></div>
             <!-- <a href="#" class="bi bi-cart"></a> -->
-{#            <div id="search-btn" class="bi bi-search"></div>#}
+            <div id="search-btn" class="bi bi-search"></div>
         </div>
 
     </header>
@@ -73,9 +58,9 @@
                 <div class="swiper-slide">
                     <div class="box" style="background: url('/static/images/home.jpg') no-repeat;">
                         <div class="content">
-                            <span class="transparent-text stylish-bold-text">{{ landing_data.header_mainheading }}</span>
-                            <h2 class="transparent-tex stylish-bold-text">{{ landing_data.header_subheading  }}</h2>
-                            <p class="transparent-text stylish-bold-text" >{{ landing_data.header_caption }} </p>
+                            <span>{{ landing_data.header_mainheading }}</span>
+                            <h1>{{ landing_data.header_subheading  }}</h1>
+                            <h2 class="mt-4">{{ landing_data.header_caption }} </h2>
 {#                            <a href="#" class="btn">get started</a>#}
                         </div>
                     </div>
@@ -181,24 +166,8 @@
             <img src="{% static 'images/home1.jpg' %}" alt="">
         </div>
         <div class="content">
-            <h3 class="mt-5">welcome</h3>
-            <p> {{ landing_data.welcome_text }} </p>
-{#            <p>Your search for the perfect property is over. It is with great pleasure that we welcome you to#}
-{#                Blackstones – north London’s leading independent property and lettings agent. With a highly reputable#}
-{#                background in property management, a decade’s worth of experience in the industry, an ace team and the#}
-{#                most innovative systems, we can promise you an experience unlike any other.</p> #}
-{#            <p>Having served the borough of Haringey for a number of years, we’re ready to expand and have an artillery#}
-{#                of properties across north London and the City that are ready for the taking. From Shoreditch to#}
-{#                Highbury and Camden to Turnpike Lane, you’re sure to find your ideal property with us. Professionalism,#}
-{#                efficiency, honesty and expertise are at the heart of our business and we are committed to achieving#}
-{#                nothing shy of excellence with every client. The expression ‘home is where the heart is’ rings true now#}
-{#                more than ever as we understand the difficulties and challenges that come with searching for a property#}
-{#                in this current market and we’re well equipped to help.</p>#} 
-{#            <p>Property searching will never be the same again; with exceptional communication, flexible hours which are#}
-{#                made to accommodate you, an endless list of properties across London and a team dedicated to exceeding#}
-{#                your expectations, you’ll find what you’re looking for. Whether you’re a landlord or a tenant, renting#}
-{#                or buying, or just trying to get on the property ladder, Blackstones is ready and waiting. Get in touch#}
-{#                and let’s begin finding you the perfect home.</p>#}
+            <h1 class="mt-5">welcome</h1>
+            <h3> {{ landing_data.welcome_text }} </h3>
         </div>
 
     </section>
