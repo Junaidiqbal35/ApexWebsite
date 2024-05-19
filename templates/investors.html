@@ -17,7 +17,9 @@
 {% endblock extrahead %}
 {% block content %}
 
-
+         <div class="container">
+              {% include 'partials/_messages.html' %}
+    </div>
   <img class="bg-img" src="{% static 'images/home6.jpg' %}" alt="background-image">
 
 
@@ -34,11 +36,13 @@
             <a href="{% url 'investors' %}">Investors</a>
         </nav>
 
-        <div class="icons">
-            <div id="menu-btn" class="bi bi-list"></div>
-            <!-- <a href="#" class="bi bi-cart"></a> -->
-            <div id="search-btn" class="bi bi-search"></div>
-        </div>
+
+
+{#        <div class="icons">#}
+{#            <div id="menu-btn" class="bi bi-list"></div>#}
+{#            <!-- <a href="#" class="bi bi-cart"></a> -->#}
+{#            <div id="search-btn" class="bi bi-search"></div>#}
+{#        </div>#}
 
     </header>
 
@@ -46,15 +50,15 @@
 
     <!-- search form  -->
 
-    <div class="search-form">
-
-        <div id="close-search" class="bi bi-x-lg"></div>
-
-        <form action="">
-            <input type="search" name="" placeholder="search here..." id="search-box">
-            <label for="search-box" class="bi bi-search"></label>
-        </form>
-    </div>
+{#    <div class="search-form">#}
+{##}
+{#        <div id="close-search" class="bi bi-x-lg"></div>#}
+{##}
+{#        <form action="">#}
+{#            <input type="search" name="" placeholder="search here..." id="search-box">#}
+{#            <label for="search-box" class="bi bi-search"></label>#}
+{#        </form>#}
+{#    </div>#}
 {#  <nav class="navbar sticky-top navbar-expand-lg">#}
 {#    <div class="container-fluid">#}
 {#      <a class="navbar-brand" href="{% url 'home' %}"><img class="img-fluid" src="{% static 'images/apex_rent_logo1.jpg' %}" alt="" height="60px" width="60px"></a>#}
@@ -73,7 +77,11 @@
 {#      </div>#}
 {#    </div>#}
 {#  </nav>#}
+
+
+
   <div class="container details">
+
     <div class="row">
         <h1>INVESTORS - HMO (Guranteed Rent)</h1>
         <div class="col-md-7" id="sub">
@@ -106,6 +114,7 @@
 
         <div class="col-md-5 d-flex justify-content-center">
             <form action="{% url 'investors' %}" method="post">
+                 {% csrf_token %}
             <div class="form mt-4">
                 <div class="title">Selling your home?</div>
                 <div class="subtitle">Please complete the form below to arrange a free no obligation sales valuation.</div>

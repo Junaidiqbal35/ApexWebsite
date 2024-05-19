@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib import messages
 from django.core.mail import send_mail
 from django.shortcuts import render
 from django.urls import reverse_lazy
@@ -42,8 +43,9 @@ class LandLordFormView(FormView):
             'New LandLord Inquiry',
             message,
             settings.DEFAULT_FROM_EMAIL,
-            ['junaidiqbal0323@gmail.com'],
+            [settings.RECIPIENT_EMAIL],
         )
+        messages.success(self.request, "Thank you for your submission, we will be in touch soon!")
         return super().form_valid(form)
 
 
@@ -74,8 +76,9 @@ class TenantContactFormView(FormView):
             'New Tenant Inquiry',
             message,
             settings.DEFAULT_FROM_EMAIL,
-            ['junaidiqbal0323@gmail.com'],
+            ['junaidiqbal0323@gmail.com', settings.RECIPIENT_EMAIL],
         )
+        messages.success(self.request, "Thank you for your submission, we will be in touch soon!")
         return super().form_valid(form)
 class SellerContactFormView(FormView):
     template_name = 'seller.html'
@@ -104,8 +107,9 @@ class SellerContactFormView(FormView):
             'New Seller Inquiry',
             message,
             settings.DEFAULT_FROM_EMAIL,
-            ['junaidiqbal0323@gmail.com'],
+            [settings.RECIPIENT_EMAIL],
         )
+        messages.success(self.request, "Thank you for your submission, we will be in touch soon!")
         return super().form_valid(form)
 
 
@@ -135,21 +139,13 @@ class InvestorContactFormView(FormView):
         message += f"Address: {form.cleaned_data['address']}\n"
         message += f"City: {form.cleaned_data['city']}\n"
         message += f"Property Type: {form.cleaned_data['property_type']}\n"
-        message += f"Beds: {form.cleaned_data['bedrooms']}\n"
         message += f"Comments: {form.cleaned_data['comment']}"
 
         send_mail(
             'New Investor Inquiry',
             message,
             settings.DEFAULT_FROM_EMAIL,
-            ['junaidiqbal0323@gmail.com'],
+            [settings.RECIPIENT_EMAIL],
         )
+        messages.success(self.request, "Thank you for your submission, we will be in touch soon!")
         return super().form_valid(form)
-
-
-
-
-def investor_page(request):
-    investor_data = InvestorPage.objects.first()
-    context = {'investor_data': investor_data}
-    return render(request, 'investors.html', context)

@@ -17,6 +17,9 @@
 {% endblock extrahead %}
 
 {% block content %}
+     <div class="container">
+              {% include 'partials/_messages.html' %}
+    </div>
 
 
   <img class="bg-img" src="{% static 'images/home5.jpg' %}" alt="background-image">
@@ -35,11 +38,11 @@
             <a href="{% url 'investors' %}">Investors</a>
         </nav>
 
-        <div class="icons">
-            <div id="menu-btn" class="bi bi-list"></div>
-            <!-- <a href="#" class="bi bi-cart"></a> -->
-            <div id="search-btn" class="bi bi-search"></div>
-        </div>
+{#        <div class="icons">#}
+{#            <div id="menu-btn" class="bi bi-list"></div>#}
+{#            <!-- <a href="#" class="bi bi-cart"></a> -->#}
+{#            <div id="search-btn" class="bi bi-search"></div>#}
+{#        </div>#}
 
     </header>
 
