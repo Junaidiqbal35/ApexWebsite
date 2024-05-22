@@ -53,7 +53,7 @@ html::-webkit-scrollbar-thumb {
 .heading {
   text-align: center;
   margin-bottom: 5rem;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #10221b;
 }
 
@@ -137,19 +137,9 @@ html::-webkit-scrollbar-thumb {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 10000;
   -webkit-transform: translateY(-110%);
           transform: translateY(-110%);
 }
@@ -159,66 +149,6 @@ html::-webkit-scrollbar-thumb {
           transform: translateY(0%);
 }
 
-.search-form #close-search {
-  position: absolute;
-  top: 1.5rem;
-  right: 2.5rem;
-  cursor: pointer;
-  color: #fff;
-  font-size: 6rem;
-}
-
-.search-form #close-search:hover {
-  color: #274f51;
-}
-
-.search-form form {
-  width: 70rem;
-  margin: 0 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 0.2rem solid #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.search-form form input {
-  width: 100%;
-  font-size: 2rem;
-  color: #fff;
-  text-transform: none;
-  background: none;
-  padding-right: 2rem;
-}
-
-.search-form form input::-webkit-input-placeholder {
-  color: #aaa;
-}
-
-.search-form form input:-ms-input-placeholder {
-  color: #aaa;
-}
-
-.search-form form input::-ms-input-placeholder {
-  color: #aaa;
-}
-
-.search-form form input::placeholder {
-  color: #aaa;
-}
-
-.search-form form label {
-  font-size: 3rem;
-  cursor: pointer;
-  color: #fff;
-}
-
-.search-form form label:hover {
-  color: #274f51;
-}
 
 .home {
   padding: 0;
@@ -248,19 +178,19 @@ html::-webkit-scrollbar-thumb {
 }
 
 .home .box .content {
-  width: 80rem;
+  width: 70rem;
   background-color: rgba(255, 255, 255, 0.377);
   padding: 50px;
 }
 
 .home .box .content span {
-  font-size: 6rem;
+  font-size: 4rem;
   color: #10221b;
   text-shadow: #fff4e6 1px 0 10px;
 }
 
-.home .box .content h2 {
-  word-spacing: 5px;
+.home .box .content h3 {
+  word-spacing: 3px;
   color: #274f51;
   padding-top: .5rem;
   text-transform: uppercase;
@@ -291,7 +221,7 @@ html::-webkit-scrollbar-thumb {
   gap: 1.5rem;
 }
 .category h1{
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 60px;
 }
 .category .box-container .box {
@@ -356,19 +286,16 @@ html::-webkit-scrollbar-thumb {
           flex: 1 1 42rem;
 }
 
-.about .content h3 {
+.about .content h1 {
   font-size: 3rem;
   color: #050d10;
 }
 
 .about .content h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #274f51;
   padding: 2rem 0;
   line-height: 2;
-}
-.about .content h1{
-  font-size: 4rem;
 }
 
 .reviews{
@@ -389,7 +316,7 @@ html::-webkit-scrollbar-thumb {
   
 }
 .reviews p{
-  font-size: 16px;
+  font-size: 14px;
 }
 .reviews .slide .text::before {
   content: '';
@@ -420,13 +347,13 @@ html::-webkit-scrollbar-thumb {
 }
 
 .reviews .slide .user h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #274f51;
 }
 
 .reviews .slide .user span {
   color: #050d10;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .clients .silde {
@@ -649,7 +576,7 @@ box-shadow: 0px 7px 29px 0px;
     font-size: 50%;
   }
   .heading {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
