@@ -5,7 +5,7 @@
       <paths name="apex-website">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/home/pyapps/ApexWebsite" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
