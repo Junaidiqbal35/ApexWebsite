@@ -5,7 +5,8 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import FormView
 
-from core.forms import TenantContactForm, LandLordContactForm, SellerContactForm, InvestmentContactForm
+from core.forms import TenantContactForm, LandLordContactForm, SellerContactForm, InvestmentContactForm, \
+    ProjectQuoteForm
 # Create your views here.
 from core.models import LandingPage, LandlordPage, TenantPage, SellerPage, InvestorPage
 
@@ -143,6 +144,40 @@ class InvestorContactFormView(FormView):
 
         send_mail(
             'New Investor Inquiry',
+            message,
+            settings.DEFAULT_FROM_EMAIL,
+            [settings.RECIPIENT_EMAIL],
+        )
+        messages.success(self.request, "Thank you for your submission, we will be in touch soon!")
+        return super().form_valid(form)
+
+
+
+class ProjectQuoteFormView(FormView):
+    template_name = 'project_quote_page.html'
+    form_class = ProjectQuoteForm
+    success_url = reverse_lazy('project_quote')
+
+    def get_context_data(self, **kwargs):
+        context = super(ProjectQuoteFormView, self).get_context_data(**kwargs)
+        # Add any additional context if needed
+        return context
+
+    def form_valid(self, form):
+        # Send email using the form's cleaned data
+        message = f"Full Name: {form.cleaned_data['full_name']}\n"
+        message += f"Email Address: {form.cleaned_data['email_address']}\n"
+        message += f"Phone Number: {form.cleaned_data['phone_number']}\n"
+        message += f"Project Type: {form.cleaned_data['project_type']}\n"
+        message += f"Project Description: {form.cleaned_data['project_description']}\n"
+        message += f"Requested Loan Amount: {form.cleaned_data['requested_loan_amount']}\n"
+        message += f"Estimated Project Value Upon Completion: {form.cleaned_data['estimated_project_value_upon_completion']}\n"
+        message += f"Own Equity Contribution: {form.cleaned_data['own_equity_contribution']}\n"
+        message += f"Estimated Credit Score: {form.cleaned_data['estimated_credit_score']}\n"
+        message += f"Additional Information: {form.cleaned_data['additional_information']}"
+
+        send_mail(
+            'New Project Inquiry',
             message,
             settings.DEFAULT_FROM_EMAIL,
             [settings.RECIPIENT_EMAIL],

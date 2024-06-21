@@ -7,5 +7,6 @@ urlpatterns = [
     path('landlord/', views.LandLordFormView.as_view(), name="landlord"),
     path('seller/', views.SellerContactFormView.as_view(), name="seller"),
     path('tenants/', views.TenantContactFormView.as_view(), name="tenants"),
-    path('investors/', views.InvestorContactFormView.as_view(), name="investors")
+    path('investors/', views.InvestorContactFormView.as_view(), name="investors"),
+    path('get-quote/', views.ProjectQuoteFormView.as_view(), name="project_quote"),
 ]

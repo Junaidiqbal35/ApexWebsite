@@ -75,3 +75,36 @@ class InvestmentContactForm(forms.Form):
         # Iterate over all fields to hide their labels
         for field in self.fields.values():
             field.label = False
+
+
+# forms.py
+
+
+
+PROJECT_TYPE_CHOICES = [
+    ('Bridging Finance', 'Bridging Finance'),
+    ('Development Finance', 'Development Finance'),
+]
+
+
+class ProjectQuoteForm(forms.Form):
+    full_name = forms.CharField(max_length=100, label='Full Name',
+                                widget=forms.TextInput(attrs={'placeholder': 'Full Name'}))
+    email_address = forms.EmailField(label='Email Address',
+                                     widget=forms.EmailInput(attrs={'placeholder': 'Email Address'}))
+    phone_number = forms.CharField(max_length=15, label='Phone Number',
+                                   widget=forms.TextInput(attrs={'placeholder': 'Phone Number'}))
+
+    project_type = forms.ChoiceField(choices=PROJECT_TYPE_CHOICES, label='Project Type')
+    project_description = forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'Brief overview of the project'}),
+                                          label='Project Description')
+
+    requested_loan_amount = forms.CharField( label='Requested Loan Amount')
+    estimated_project_value_upon_completion = forms.CharField(
+                                                                 label='Estimated Project Value Upon Completion')
+    own_equity_contribution = forms.CharField(label='Own Equity Contribution')
+
+    estimated_credit_score = forms.IntegerField(label='Estimated Credit Score')
+    additional_information = forms.CharField(
+        widget=forms.Textarea(attrs={'placeholder': 'Any additional information or comments'}), required=False,
+        label='Additional Information')
