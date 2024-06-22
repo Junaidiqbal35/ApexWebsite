@@ -30,6 +30,10 @@ filter: brightness(0.6);
     padding: 40px;
     color: bisque;
 }
+.details img{
+  width: 83%;
+  height: 300px;
+}
 .details h1{
     color: white;
     font-size: 3rem;
@@ -165,4 +169,10 @@ filter: brightness(0.6);
   li{
     font-size: 1.3rem;
     font-weight: 400;
+  }
+  @media (max-width: 920px) {
+  .details img{
+    width: auto;
+    height: auto;
+  }
   }
